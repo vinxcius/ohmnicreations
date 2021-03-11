@@ -73,6 +73,7 @@ nav{
    font-size: 2em;
    color: white;
    cursor: pointer;
+   display: none;
 }
 /*HEADER END*/
 
