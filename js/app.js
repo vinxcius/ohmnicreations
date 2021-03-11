@@ -1,50 +1,45 @@
 
-const burger = document.querySelector('.hamburger');
-const nav = document.querySelector('.nav-links');
+const menuItems = document.querySelectorAll(
+    'a')
 
-
-function navSlide() {
-
-
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-active')
-        burger.classList.toggle('toggle')
-    })
-
-    function closeOnClick() {
-        nav.addEventListener('click', () => {
-            nav.classList.remove('nav-active')
-            burger.classList.toggle('toggle')
-        })
-    }
-    closeOnClick()
-
-}
-
-navSlide()
-
-
-//Smooth Scrool
-const menuItems = document.querySelectorAll('a')
-//Para cada item no menu, executar a funçào scrollToId
-menuItems.forEach(item => {
-    item.addEventListener('click', scrollToId)
+menuItems.forEach(link => {
+    link.addEventListener('click', scrollToId)
 })
 
+//Pega a altura e o código do ID clicado
+function getScrollTopByHref(element) {
+    const id = element.getAttribute('href') //pega o valor de href, ex: #contact
+
+    return document.querySelector(id).offsetTop
+    //pega o código do id que foi clicado
+    //OffsetTop informa a distância (em pixels) do topo para a sessão que foi clicada
+}
+
+//Scrolla para a sessão
 function scrollToId(event) {
-
-
+    //impede de aparecer as '#' de cada link (meusite.com/index.html#Portfolio)
     event.preventDefault()
 
-    const element = event.target;
-    const id = element.getAttribute('href')
-    const section = document.querySelector(id).offsetTop
+    //-80 define a distancia entre a sessão e o navbar
+    const goToSection = getScrollTopByHref(event.target) - 85
+
+    scrollToPosition(goToSection)
+}
 
 
-    window.scroll({
-        top: section - 50,
-        behavior: 'smooth'
-    })
+//recebe a distancia entre o ID e a navbar e seta o scroll para smooth
+function scrollToPosition(goToSection) {
+
+    //scroll recebe dois parâmetros: valor de x e y;
+    //É possível passar um objeto também
+    //CODIGO NAO FUNCIONA EM TODOS OS BROWSERS
+    // window.scroll({
+    //     top: goToSection,
+    //     behavior: "smooth" //
+    // })
+
+    //Eixo X, Eixo Y e Duração
+    smoothScrollTo(0, goToSection)
 }
 
 
@@ -81,3 +76,31 @@ function smoothScrollTo(endX, endY, duration) {
     }, 1000 / 60); // 60 fps
 };
 
+
+
+//NavSlide
+
+
+const burger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav-links');
+
+
+function navSlide() {
+
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active')
+        burger.classList.toggle('toggle')
+    })
+
+    function closeOnClick() {
+        nav.addEventListener('click', () => {
+            nav.classList.remove('nav-active')
+            burger.classList.toggle('toggle')
+        })
+    }
+    closeOnClick()
+
+}
+
+navSlide()

@@ -68,16 +68,11 @@ nav{
    color: rgb(252, 132, 132);
    transform: scale(1.1);
 }
-.hamburger{
-   
-}
-.hamburger .slash{
-   background-color: white;
-   width: 20px;
-   height: 2px;
-   margin: 6px;
+
+.hamburger i{
+   font-size: 2em;
+   color: white;
    cursor: pointer;
-   display: none;
 }
 /*HEADER END*/
 
@@ -422,16 +417,23 @@ textarea{
    transform: translateY(-20px);
 }
 
-.contactForm .inputBox input[type="submit"]{
+.contactForm .inputBox button{
    width: 100px;
    padding: 10px;
 
-   background: #c282e7;
+   background: #862ece;
+   border: 2px solid transparent;
    color: #fff;
    font-size: 18px;
    cursor: pointer;
-   border: none;
-  
+   outline: none;
+   transition: .4s;
+}
+
+.contactForm .inputBox button:hover{
+   border: 2px solid #862ece;
+   background: none;
+   color: black;
 }
 /*CONTACT END*/
 
@@ -489,6 +491,8 @@ footer{
 .wave-container svg{
    display: block;
 }
+
+
 /*SHARED CODE END*/
 
 /*Media Queries*/
@@ -628,18 +632,34 @@ footer{
 
 @media screen and (max-width:600px){
    /*Nav*/
+
    .nav-links{
-      display: none;
+      position: fixed;
+      right: 0px;
+      height: 95vh;
+      top: 85px;
+      background-color: #5f1d96; 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around!important;
+      align-items: center;
+      width: 100% !important;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+   }
+      
+   .nav-active{
+      transform: translateX(0%);
    }
 
-   .logo{
-      width: 40%;
-   }
+
+
+  
    .logo a{
       font-size: 1.2rem;
    }
 
-   .hamburger .slash{
+   .hamburger i{
       display: flex;
    }
    /*Nav End*/
