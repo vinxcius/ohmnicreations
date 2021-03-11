@@ -21,10 +21,10 @@ html{
 /* NAV START*/
 
 nav{
-   min-height: 6vh;
+   min-height: 50px;
    background-color: #6824a0;   
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center; /*Alinha Horizontalmente*/
    min-height: 8vh;
    position: relative;
@@ -36,7 +36,7 @@ nav{
 
 .logo{
    margin: 10px 20px;
-   width: 50%;
+   width: 40%;
 }
 .logo a{
    text-transform: uppercase;
@@ -50,7 +50,7 @@ nav{
 
 .nav-links{
    display: flex;
-   width: 50%;
+   width: 40%;
    justify-content: space-around;
    list-style-type: none;
 
@@ -634,11 +634,14 @@ footer{
 @media screen and (max-width:600px){
    /*Nav*/
 
+   nav{
+      justify-content: space-around;
+   }
    .nav-links{
       position: fixed;
       right: 0px;
       height: 95vh;
-      top: 74px;
+      top: 85px;
       background-color: #5f1d96; 
       display: flex;
       flex-direction: column;
