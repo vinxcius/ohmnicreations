@@ -1,0 +1,711 @@
+/* RESETS */
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: 'Lato', sans-serif;
+
+}
+
+a{
+   text-decoration: none;
+}
+
+html{
+   scroll-behavior: smooth ;
+}
+/* NAV START*/
+
+nav{
+   min-height: 6vh;
+   background-color: #6824a0;   
+   display: flex;
+   justify-content: space-around;
+   align-items: center; /*Alinha Horizontalmente*/
+   min-height: 8vh;
+   position: relative;
+   box-shadow: 3px 3px 30px #000;
+   position: fixed;
+   width: 100%;
+   z-index: 9999;
+}
+
+.logo{
+   margin: 10px 20px;
+   width: 50%;
+}
+.logo a{
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   font-size: 30px;
+   transition: .4s;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+}
+
+
+.nav-links{
+   display: flex;
+   width: 50%;
+   justify-content: space-around;
+   list-style-type: none;
+
+}
+
+.nav-links a{
+   padding: 10px;
+   color: white;
+   text-transform: uppercase;
+   font-weight: bold;
+   transition: 0.4s;
+}
+
+.nav-links a:hover{
+   color: rgb(252, 132, 132);
+   transform: scale(1.1);
+}
+.hamburger{
+   
+}
+.hamburger .slash{
+   background-color: white;
+   width: 20px;
+   height: 2px;
+   margin: 6px;
+   cursor: pointer;
+   display: none;
+}
+/*HEADER END*/
+
+
+/*INTRO START*/
+
+#intro{
+
+   background-image: linear-gradient(to bottom, transparent 0%, #872ecf 101%), url('..//img/teste.png');
+   background-position: center;
+   background-size: cover;
+   width: 100%;
+   min-height: 90vh;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+#intro .container{
+   flex-direction: column;
+}
+.intro-title h1{
+   
+   font-size: 2.6rem;
+   padding: 40px;
+   text-transform: uppercase;
+   color: white;
+   text-shadow: 0px 6px 15px black;
+}
+
+.intro-description{
+   color: rgb(253, 253, 253);
+
+   background-color: rgba(0, 0, 0, 0.342);
+   padding: 30px;
+   border-radius: 10px; 
+   width: 80%;
+   margin: 50px auto;
+   font-size: 1.4rem;
+   text-shadow: 2px 2px black;
+
+}
+
+a.call-to-action{
+   background-color: rgb(151, 49, 151);
+   width: 20%;
+   padding: 10px;
+   margin: 20px auto;
+   border-radius: 10px;
+   font-size: 20px;
+   text-transform: uppercase;
+   color: white;
+   font-weight: bold;
+   transition: .3s;
+}
+
+a.call-to-action:hover{
+   box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.363);
+   background-color: white;
+   color: rgb(161, 29, 161);
+}
+
+/*INTRO END*/
+
+/*ABOUT US START*/
+#about-us{
+   margin-top: 20px;
+   padding: 30px;
+}
+#about-us .item-box{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 60px 20px;
+   border-radius: 30px;
+   padding: 50px;
+}
+.item-box:nth-child(odd),
+.text-title:nth-child(even){
+   flex-direction: row-reverse;
+   text-align: right;
+}
+
+.text-title{
+   margin-bottom: 30px;
+   text-transform: uppercase;
+   color: rgb(127, 69, 236);
+   font-size: 1.5em;
+   margin: 20px 0px;
+}
+.text-box span{
+   color: rgb(127, 69, 236);
+}
+.text-box{
+   width: 50%;
+   font-size: 19px;
+   font-weight: bold;
+}
+
+
+.section-img{
+   width: 28%;
+   margin: 0px 20px ;
+}
+.section-img img{
+   width: 100%;
+   margin: 0px auto;
+   -webkit-filter: drop-shadow(10px 0px 10px rgba(0,0,0,0.3))
+   drop-shadow(10px 0px 10px rgba(0,0,0,0.3));
+   filter: drop-shadow(10px 0px 10px rgba(0,0,0,0.3)) 
+   drop-shadow(10px 0px 10px rgba(0,0,0,0.3));
+}
+
+/*ABOUT US END*/
+
+/*SKILLS START*/
+#skills{
+   background-image: linear-gradient(to bottom, transparent 0%, rgb(201, 128, 195) 87%), url('../img/part2.png');
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   padding: 50px;
+   font-weight: bold;
+}
+
+.container{
+   display: flex;
+   backdrop-filter: blur(2.5px);
+   border-radius: 10px;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 100%;
+}
+.skill-box{
+   padding: 20px;
+   text-align: center;
+   width: 30%;
+   flex-direction: column;
+   margin: 10px;
+   align-content: stretch;
+}
+
+.skill-description p{
+   color: black;
+   font-size: 20px;
+   margin: 15px;
+   text-align: center;
+}
+/*SKILLS END*/
+
+
+
+/*TEAM START*/
+#team{
+   width: 100%;
+   text-align: center;
+   margin: 0px auto;
+   background-color: rgb(230, 234, 235);
+}
+
+#team .container{
+   padding: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+.person-box{
+   width: 30%;
+   margin: 40px auto;
+   flex-grow: 1;
+}
+.person-img img{
+   border-radius: 50%;
+   padding: 20px;
+   width: 250px;
+   height: 250px;    
+   line-height: 100px;
+}
+
+.person-name{
+   font-size: 1.4rem;
+   margin: 10px;
+}
+
+.job-description{
+   font-size: 1.2rem;
+}
+
+
+
+
+#pricing .container{
+   width: 80%;
+   margin: 0px auto;
+   align-content: stretch;   
+}
+
+#pricing .section-text{
+   font-size: 1.3rem;
+   color: black;
+   justify-content: center;
+   display: flex;
+}
+
+#pricing .section-description p{
+   font-size: 1.1rem;
+   color: black;
+}
+
+#pricing .section-icon i{
+   font-size: 4rem;
+   color: #c41f6c;
+}
+
+.curved svg{
+   display: block;
+   width: 100%;
+   background-color: white;
+}
+
+
+
+/*CONTACT START*/
+#contact{
+ background-color: #e6eaeb;
+ position: relative;
+ padding: 50px 100px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.container{
+   width: 100%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+}
+
+.container .contactInfo{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+}
+
+.container .contactInfo .box{
+   position:  relative;
+   padding: 20px 0;
+   display: flex;
+}
+
+.contactInfo .box .icon{
+   min-width: 60px;
+   height: 60px;
+   background-color: #fff;
+
+   color: #6824a0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 22px;
+}
+
+.contactInfo .box .text{
+   display: flex;
+   margin-left: 20px;
+   font-size: 16px;
+   flex-direction: column;
+   font-weight: 300;
+}
+
+
+.contactInfo .box .text h3{
+   font-weight: bold;
+   color: #872ecf;
+}
+
+.contactForm{
+   width: 40%;
+   padding: 40px;
+   background: #fff;
+   border-radius: 5px;
+   box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+.contactForm h2{
+   font-size: 30px;
+   color:#872ecf;
+   font-weight: bold;
+}
+
+.contactForm .inputBox{
+   position: relative;
+   width: 100%;
+   margin-top: 10px;
+}
+
+
+.contactForm .inputBox input,
+textarea{
+   width: 100%;
+   padding: 5px 0;
+   font-size: 16px;
+   
+
+   border: none;
+   border-bottom: 2px solid rgb(44, 44, 44);
+   margin: 10px 0;
+   outline: none;
+   
+   resize: none;
+}
+
+.contactForm .inputBox span{
+   color: #872ecf;
+   font-size: 16px;
+
+   position: absolute;
+   left: 0;
+
+   padding: 5px 0;
+   margin: 10px 0;
+
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+   color: #6824a0;
+   font-weight: bold;
+   font-size: 12px;
+
+   transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+   width: 100px;
+   padding: 10px;
+
+   background: #c282e7;
+   color: #fff;
+   font-size: 18px;
+   cursor: pointer;
+   border: none;
+  
+}
+/*CONTACT END*/
+
+
+/*FOOTER START*/
+footer{
+   background-color: #6824a0;
+   padding: 20px;
+   text-align: center;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+   font-size: 1.2rem;
+   color: white;
+   min-height: 8vh;
+}
+
+/*FOOTER END*/
+
+/*SHARED CODE*/
+.section-title{
+   text-align: center;
+   margin-bottom: 30px;
+   text-transform: uppercase;
+   color:rgb(182, 13, 182);
+   font-size: 2.5em;
+   padding: 20px;
+}
+
+
+.section-icon{
+   font-size: 4.5em;
+   color:  rgb(196, 31, 108);
+   margin: 10px;
+}
+
+.section-text{
+   font-size: 1.4rem;
+   text-transform: uppercase;
+   font-family: 'Montserrat', sans-serif;
+   color: rgb(255, 255, 255);
+}
+
+.section-title h2{
+   color: rgb(175, 45, 187);
+}
+
+
+.section-description p{
+   font-size: 20px;
+   margin: 15px;
+   text-align: center;
+}
+
+.wave-container svg{
+   display: block;
+}
+/*SHARED CODE END*/
+
+/*Media Queries*/
+
+
+@media screen and (max-width:1024px){
+
+   /*Nav*/
+   .nav-links{
+      width: 60%;
+   }
+
+   .logo{
+      width: 50%;
+      margin: 10px 20px;
+   }
+
+   .logo a{
+      font-size: 25px;
+   }
+
+   /*Nav End*/
+
+   /*Team*/
+   .person-box{
+      width: 30%;
+   }
+   /*Team End*/
+
+   /*Skills*/
+   .skill-box{
+      width: 30%;
+   }
+   /*Skills End*/
+
+   /*Pricing*/
+   #pricing .skill-box{
+      width: 40%;
+   }
+
+   /*Pricing End*/
+
+}
+
+@media (max-width: 991px){
+   #contact{
+      padding: 50px;
+      width: 100%;
+   }
+
+   .container{
+      flex-direction: column;
+   }
+
+   .container .contactInfo
+   {
+      margin-bottom: 40px
+   }
+   
+   .container .contactForm,
+   .contactInfo{
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 800px){
+
+   /*Nav*/
+   .logo a{
+      font-size: 1.3rem;
+   }
+   .logo{
+      width: 20%;
+   }
+
+   .nav-links{
+      width: 70%;
+      font-size: 15px
+   }
+   /*Nav End*/
+
+   /*About Us*/
+
+   #about-us{
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+   }
+   .text-title{
+      font-size: 1rem;
+   }
+
+   #about-us .item-box{ 
+      margin: 0px;
+   }
+   .text-box{
+      width: 100%;
+      font-size: 16px;
+      font-size: .9rem;
+   }
+
+
+   .section-img{
+      width: 55%;
+   }
+
+   /*About Us End*/
+
+   /*Skills*/
+
+
+   #skills .container{
+      width: 100%;
+      padding: 10px;
+   }
+
+   .skill-box{
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+   }
+   /*Skills End*/
+
+   /*Team*/
+
+   .person-box{
+      width: 100%;
+   }
+   /*Team End*/
+
+   #pricing .skill-box{
+      width: 100%;
+   }
+
+  
+}
+
+@media screen and (max-width:600px){
+   /*Nav*/
+   .nav-links{
+      display: none;
+   }
+
+   .logo{
+      width: 40%;
+   }
+   .logo a{
+      font-size: 1.2rem;
+   }
+
+   .hamburger .slash{
+      display: flex;
+   }
+   /*Nav End*/
+
+   /*Intro*/
+   a.call-to-action{
+      width: 40%;
+   }
+
+   /*Intro End*/
+   /*About Us */
+   .text-title{
+      font-size: 1rem;
+   }
+
+   .text-box{
+      width: 100%;
+      font-size: 13px;
+   }
+
+   #about-us .item-box{
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      margin: 20px auto;
+      padding: 10px;
+   }
+
+   .section-img{
+      width: 45%;
+      margin: 15px;
+   }
+   /*About Us End*/
+
+   /*Skills*/
+   #skills{
+      padding: 0px;
+   }
+
+   #skills .container{
+      width: 100%;
+      padding: 10px;
+   }
+   #skills .skill-box,
+   #pricing .skill-box{
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+
+   }
+   /*Skills End*/
+
+   /*Team*/
+
+
+   #team .section-text h3{
+      font-size: 1.2rem;
+      text-shadow: 2px 1px black;
+   }
+
+
+   /*Team End*/
+
+   /*Shared Code*/
+   .section-title{
+      font-size: 1.2rem;
+   }
+
+}
