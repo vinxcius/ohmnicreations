@@ -26,7 +26,6 @@ nav{
    display: flex;
    justify-content: center;
    align-items: center; /*Alinha Horizontalmente*/
-   min-height: 8vh;
    position: relative;
    box-shadow: 3px 3px 30px #000;
    position: fixed;
@@ -641,7 +640,7 @@ footer{
       position: fixed;
       right: 0px;
       height: 95vh;
-      top: 85px;
+      top: 65px;
       background-color: #5f1d96; 
       display: flex;
       flex-direction: column;
